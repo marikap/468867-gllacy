@@ -7,25 +7,26 @@
   <body>
   <header class="main-header">
       <div class="header_logo">
-      <a href="index.html">
+      <a href="index.html"></a>
           <img src="img/index-logo.svg" width="154" height="64" alt="Logo Glassy">
-      </div> 
+      </div>
     <nav class="main-navigation">
         <ul class="site-navigation">
-          
+
           <li class="item-list">
-          <a href="catalog.html">Каталог</a></li>
+          <a href="catalog.html">Каталог</a>
           	<ul class="dropdown-menu">
           		<li> <a href="#"><b>Новинки</b></a> </li>
                 <li> <a href="#">Сливочное</a> </li>
-                <li> <a href="#">Щербеты</a> </li>  
+                <li> <a href="#">Щербеты</a> </li>
                 <li> <a href="#">Фруктовый лед</a> </li>
                 <li> <a href="#">Мелорин</a> </li>
-            </ul>        
-          </li>  
+            </ul>
+        </ul>
+          </li>
 
           <li> <a href="pay.html">Доставка и оплата</a> </li>
-          <li> <a href="about_us.html">О компании </a> </li>       
+          <li> <a href="about_us.html">О компании </a> </li>
       </nav>
 
        <div class="user-block">
@@ -33,6 +34,7 @@
         <a class="login" href="#">Вход</a>
         <a class="cart" href="#">2 товара</a>
 
+       </div>
         <div class="shopping-list">
 
               <div class="shopping-list-first">
@@ -51,7 +53,7 @@
 
               <span class="total">Итого: 750 руб.</span>
               <button class="button-order" type="submit">Оформить заказ</button>
-			
+
 
        			<p class="worktime">С 10 до 20, ежедневно</p>
        			<p class="phone">8 812 450-25-25</p>
@@ -60,49 +62,63 @@
 
      <main class="container-catalog">
 
-      <div class="breadcrumbs">
-      	<a href="index.html">Главная</a>
-      	<a href="#">Каталог</a>
-      	<a class="active-breadcrumbs" href="#">Сливочное</a>
-	  </div>
+      <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link" href="index.html">Главная</a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link" href="#">Каталог</a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="active-breadcrumbs-link">Сливочное</a>
+            </li>
+      </ul>
 
 	   <h1>Сливочное мороженое</h1>
+    <!-- catalog-filter -->
+	    <div class="container">
+          <section class="catalog-filter clearfix">
+            <form action="/echo" method="get">
+              <div class="filter-sorting">
+        		    <span>Сортировка:</span>
 
-	    <div class="select">
-        	<div class="wrapper">
-        		<span>Сортировка:</span>
-        
-        		<select name="sort">
-         	 		<option value="cheap-first">сначала недорогие</option>
-          			<option value="exp-first">сначала дорогие</option>
-          			<option value="by-fat">по жирности</option>
-        		</select>
-  			</div>
+        		      <select name="sort">
+         	 		       <option value="cheap-first">сначала недорогие</option>
+          			     <option value="exp-first">сначала дорогие</option>
+          			     <option value="by-fat">по жирности</option>
+        		      </select>
 
-  			<div class="wrapper">
-        		<span>Цена: 100 руб. – 500 руб.</span>
-        		<input type="range" min="100" max="500">
-      		</div>
-      		<div class="wrapper">
-        		<span>Жирность:</span>
-        		<label><input type="radio">0%</label>
-        		<label><input type="radio" checked>до 10%</label>
-        		<label><input type="radio">до 30%</label>
-        		<label><input type="radio">выше 30%</label>
-      		</div>
-      		<div class="wrapper">
-        		<span>Наполнители:</span>
-        		<label><input type="checkbox" checked>шоколадные</label>
-        		<label><input type="checkbox" checked>сахарные присыпки</label>
-        		<label><input type="checkbox">фрукты</label>
-        		<label><input type="checkbox">сиропы</label>
-        		<label><input type="checkbox">джемы</label>
-      		</div>
+
+  			      <div class="filter-price">
+        		    <span>Цена: 100 руб. – 500 руб.</span>
+        		    <input type="range" min="100" max="500">
+      		    </div>
+
+              <div class="filter-fatness">
+        		    <span>Жирность:</span>
+        		    <label><input type="radio">0%</label>
+        		    <label><input type="radio" checked>до 10%</label>
+        		    <label><input type="radio">до 30%</label>
+        		    <label><input type="radio">выше 30%</label>
+      		    </div>
+
+      		    <div class="filter-fillers">
+        		    <span>Наполнители:</span>
+        		    <label><input type="checkbox" checked>шоколадные</label>
+        		    <label><input type="checkbox" checked>сахарные присыпки</label>
+        		    <label><input type="checkbox">фрукты</label>
+        		    <label><input type="checkbox">сиропы</label>
+        		    <label><input type="checkbox">джемы</label>
+      		    </div>
+            </div>
       		<button class="button select">Применить</button>
+          </form>
+          </section>
 		</div>
+    <!-- catalog-filter-end -->
 
-		<section class="content-cream">
-        
+    <section class="content-cream">
+
         <article class="cream">
           <div class="cream-content">
             <img src="img/orange.png" width="267" height="267" alt="Cream with orange">
@@ -253,7 +269,7 @@
 	</section>
 
 	<div class="paginator">
-       
+
         <a class="current" href="#">1</a>
         <a href="#">2</a>
         <a href="#">3</a>
@@ -264,7 +280,7 @@
         </a>
 
     </div>
-    
+
 </main>
 
 <footer class="main-footer">
@@ -276,7 +292,7 @@
         <a class="social-button fb" href="#">Фейсбук</a>
         <a class="social-button vk" href="#">Вконтакте</a>
 
-	  </section>  
+	  </section>
 
 	<section class="reference">
         <ul>
@@ -293,7 +309,7 @@
             <a class="reference-fourth" href="#">Экологические стандарты</a>
           </li>
         </ul>
-	</section> 
+	</section>
 
 	<section class="footer-copyright">
 
@@ -302,7 +318,7 @@
 
       </section>
 
-</footer>  
+</footer>
 
 </body>
 </html>
